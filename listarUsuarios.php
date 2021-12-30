@@ -1,14 +1,13 @@
 <?php
-
    declare(strict_types=1);
-
-    $listar = require 'conectar.php';
+   try{
+    $pdo = require 'conectar.php';
     $sql = 'select  * from usuarios';
-    $result = $listar->query($sql);
+    $result = $pdo->query($sql);
 
     echo '<h3>Usuários: </h3>';
     
-    if($conn){
+        
       echo '<div class="table-responsive">';
       echo '<table class="table">
   <thead>
@@ -23,7 +22,7 @@
     </tr>
   </thead>';
   
-    foreach ($listar->query($sql) as $key => $value){
+    foreach ($pdo->query($sql) as $key => $value){
      echo '<tbody>';
      echo '<tr>';
      echo '<td>'. $value['iduser'] .'</td>';
@@ -36,6 +35,10 @@
      echo '</tr>';
      
    }
+  }
+  catch (PDOException $e){
+    echo 'Error: ' . $e->getMessage();
+  }
    echo '</div>';
-}
+?>
   

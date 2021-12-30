@@ -2,13 +2,12 @@
 
    declare(strict_types=1);
 
-    $listar = require 'conectar.php';
+    $pdo = require 'conectar.php';
     $sql = 'select  * from os';
-    $result = $listar->query($sql);
+    $result = $pdo->query($sql);
 
     echo '<h3>Clientes: </h3>';
     
-    if($conn){
       echo '<div class="table-responsive">';
       echo '<table class="table">
   <thead>
@@ -26,8 +25,8 @@
       <th scope="col">Valor</th>
     </tr>
   </thead>';
-  
-    foreach ($listar->query($sql) as $key => $value){
+    try{
+    foreach ($pdo->query($sql) as $key => $value){
      echo '<tbody>';
      echo '<tr>';
      echo '<td>'. $value['idos'] .'</td>';
@@ -44,6 +43,10 @@
     echo '</tr>';
      
    }
-   echo '</div>';
 }
+   catch (Exception $e){
+    echo 'Exceção capturada: ',  $e->getMessage(), "\n";
+}
+   echo '</div>';
+?>
   

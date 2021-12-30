@@ -25,8 +25,7 @@
         </div>
         
       </li>
-    </ul>
-  </div>
+    
   <div class="collapse navbar-collapse" id="navbarNavDropdown">
     <ul class="navbar-nav">
         <li class="nav-item dropdown">
@@ -38,8 +37,7 @@
         </div>
         
       </li>
-    </ul>
-  </div>
+   
   <div class="collapse navbar-collapse" id="navbarNavDropdown">
     <ul class="navbar-nav">
         <li class="nav-item dropdown">
