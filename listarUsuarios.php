@@ -1,6 +1,6 @@
 <?php
    declare(strict_types=1);
-   try{
+   
     $pdo = require 'conectar.php';
     $sql = 'select  * from usuarios';
     $result = $pdo->query($sql);
@@ -30,15 +30,12 @@
      echo '<td>'. $value['perfil'] .'</td>';
      echo '<td>'. $value['tel'] .'</td>';
      echo '<td>'. $value['email'] .'</td>';
-     echo '<td>'. $value['login'] .'</td>';
+     echo '<td>'. $value['loginUsuario'] .'</td>';
      echo '<td>'. $value['senha'] .'</td>';
      echo '</tr>';
      
    }
-  }
-  catch (PDOException $e){
-    echo 'Error: ' . $e->getMessage();
-  }
+  
    echo '</div>';
 ?>
   

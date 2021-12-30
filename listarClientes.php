@@ -21,7 +21,7 @@
       <th scope="col">Telefone</th>
     </tr>
   </thead>';
-  try{
+ 
     foreach ($pdo->query($sql) as $key => $value){
      echo '<tbody>';
      echo '<tr>';
@@ -34,10 +34,7 @@
     echo '</tr>';
      
    }
-  }
-  catch (Exception $e){
-    echo 'Exceção capturada: ',  $e->getMessage(), "\n";
-  }
+   
    echo '</div>';
 ?>
   

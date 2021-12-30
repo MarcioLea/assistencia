@@ -25,8 +25,7 @@
       <th scope="col">Valor</th>
     </tr>
   </thead>';
-    try{
-    foreach ($pdo->query($sql) as $key => $value){
+     foreach ($pdo->query($sql) as $key => $value){
      echo '<tbody>';
      echo '<tr>';
      echo '<td>'. $value['idos'] .'</td>';
@@ -41,12 +40,7 @@
      echo '<td>'. $value['laudo'] .'</td>';
      echo '<td>'. $value['valor'] .'</td>';
     echo '</tr>';
-     
-   }
-}
-   catch (Exception $e){
-    echo 'Exceção capturada: ',  $e->getMessage(), "\n";
-}
+  }
    echo '</div>';
 ?>
   

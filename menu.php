@@ -21,6 +21,7 @@
           Usuários
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="cadastroUsuarios.html">Inserir</a>
           <a class="dropdown-item" href="usuarios.php">Listar</a>
         </div>
         
