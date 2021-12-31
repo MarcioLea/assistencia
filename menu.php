@@ -21,7 +21,7 @@
           Usuários
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-          <a class="dropdown-item" href="cadastroUsuarios.html">Inserir</a>
+          <a class="dropdown-item" href="cadastroUsuarios.html">Cadastrar</a>
           <a class="dropdown-item" href="usuarios.php">Listar</a>
         </div>
         
@@ -34,6 +34,7 @@
           Clientes
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="cadastrarClientes.html">Cadastrar</a>
           <a class="dropdown-item" href="clientes.php">Listar</a>
         </div>
         
